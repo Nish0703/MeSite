@@ -247,8 +247,8 @@ footer { padding: 34px 0 50px; text-align: center; color: var(--muted); font-siz
       <div class="more">
         <div class="steps">
           <div><h3>The question</h3>When you split data into groups, how many of them are real and how many are just noise? Pick too many and you chase patterns that aren't there.</div>
-          <div><h3>What I did</h3>Developed KL-Halt, a stopping rule for hierarchical Gaussian Mixture Models, built on forward KL divergence and a parametric bootstrap. I tested it on 4 datasets across 20 runs.</div>
-          <div><h3>The result</h3>It found the true structure 88.8% of the time, against 86.2% for BIC and 83.8% for AIC, and got 100% on the 2- and 3-cluster sets. Work grows roughly in line with data size. A paper is in preparation.</div>
+          <div><h3>What I did</h3>Developed KL-Halt, a stopping rule for hierarchical Gaussian Mixture Models, built on forward KL divergence and a parametric bootstrap. I tested it on 4 synthetic benchmarks across 20 independent runs, then stress-tested it across 7 dimensionalities (2 to 50 dimensions) and noise levels up to σ = 1.5.</div>
+          <div><h3>The result</h3>It found the true structure 88.8% of the time, against 86.2% for BIC and 83.8% for AIC, and got 100% on the 2- and 3-cluster sets. It held at 80% or better up to 15 dimensions, and its work grows roughly in line with data size up to 50,000 samples. A paper is in preparation.</div>
         </div>
         <div class="why"><span class="hand">why it matters outside the lab</span><p>It's the same question behind customer segmentation: how many distinct user groups are there, and when should you stop slicing? Getting that wrong means building for segments that don't exist.</p></div>
       </div>
@@ -282,7 +282,7 @@ footer { padding: 34px 0 50px; text-align: center; color: var(--muted); font-siz
     <div class="more">
       <div class="steps">
         <div><h3>What I took on</h3>The society's events, owned end to end: from the first idea through outreach and partnerships to the day itself.</div>
-        <div><h3>What I started</h3>I reached out to a professional debate coach on my own and brought them on board. They ran several specialised workshops for members, a first for the society.</div>
+        <div><h3>What I started</h3>I reached out to a professional debate coach on my own and brought them on board. They led specialised debate sessions for members, a first for the society.</div>
         <div><h3>What came out of it</h3>The network from that collaboration became an external partnership and a joint on-campus debate event that brought the society a paid engagement. I also created Debate Auction, a new campus-wide format with strong participation.</div>
       </div>
       <div class="why"><span class="hand">why it matters outside the society</span><p>Cold outreach, a partnership and a paid outcome is the loop a founder's office runs every day: find the opening, bring the right people in, deliver, and get something back.</p></div>
@@ -385,7 +385,12 @@ var PROJECTS = [
     nums:[["~40M students","w"],["RICE 40 vs 9 to 12","g"]],
     steps:[["The problem","About 15% of roughly 40M students use finance apps. Gen Z data showed 74% feel money stress and 62% quit apps with unclear interfaces."],
            ["What we did","Built 2 personas, ranked 4 product pillars by RICE, and designed a 6-step onboarding flow with wireframes."],
-           ["The result","A launch plan with HEART metrics (D7 and D30 retention, WAU/MAU, NPS) and a 6-month rollout."]] }
+           ["The result","A launch plan with HEART metrics (D7 and D30 retention, WAU/MAU, NPS) and a 6-month rollout."]] },
+  { id:"sql", links:[["GitHub","https://github.com/Nish0703/-SQL-Data-Warehouse-Project"]], roles:["founder","product"], title:"A SQL data warehouse for sales analytics", sub:"Group project · Aug to Sep 2025",
+    nums:[["60K+ sales, 18K+ customers, 397 product records","w"],["3-layer medallion design","g"]],
+    steps:[["The setup","Sales data was spread across 6 CRM and ERP tables: 60K+ sales, 18K+ customers and 397 product records. Reporting needs it in one clean model."],
+           ["What we built","A 3-layer medallion architecture with stored-procedure ETL pipelines that cleansed, deduplicated and validated 60K+ records across the bronze and silver layers."],
+           ["What it gives you","An analytics-ready star schema with 2 dimensions and a sales fact table enriched with customer and product data, backed by checks for duplicate keys, invalid dates, inconsistent attributes and referential integrity."]] }
 ];
 
 var LANGS = [
@@ -478,7 +483,8 @@ var NOTES = [
   ["Built the TEDxIITGuwahati website with the web team.", "#bdeedd", -1.5],
   ["Started Debate Auction, a new campus-wide format.", "#c9d1ff", 3],
   ["Studies chemical science, works on product and strategy problems.", "#ffd95e", 1.5],
-  ["Organised an alumni meet for 50+ alumni.", "#ffc2d1", -2.5],
+  ["Ran the SMRITI alumni event with SAIL for 50+ alumni, including IITG's first batch.", "#ffc2d1", -2.5],
+  ["Invited distinguished speakers and ran lecture events for LSP at Techniche.", "#c9d1ff", 2.5],
   ["Top 5 teams at the Ethos Hackathon. We built an anonymised semester-review system.", "#bdeedd", 2],
   ["NTSE Stage 1 qualified, State Rank 16 in Uttarakhand.", "#c9d1ff", -3],
   ["Scholar badge gold medal, six years in a row.", "#ffd95e", 1.5]
